@@ -1,0 +1,6 @@
+---
+# vars file for db
+db_name: db-alshubenkov
+db_user: alshubenkov
+db_pass: '*00BA96EBBDCA5E18BEDBA0F0C078C6D2EA98DFD8'
+

@@ -1,0 +1,15 @@
+#- name: Change repository  Step 4 - Setup 'web' Roles
+#  copy:
+#    src: sources.list
+#    dest: /etc/apt/
+#    backup: yes
+
+- name: Update repository and Upgrade packages
+  apt:
+    upgrade: dist
+    update_cache: yes
+
+- name: Setup timezone to Europe/Moskow
+  timezone:
+    name: Europe/Moskow
+    state: latest

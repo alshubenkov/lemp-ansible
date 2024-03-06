@@ -1,0 +1,19 @@
+---
+# tasks file for db
+- name: Install MySQL
+  apt:
+    name: ['mysql-server','mysql-client','python3-pip']
+    state: latest
+  notify: restart mysql
+
+- name: Install PyMySQL package
+  ansible.builtin.pip:
+    name: PyMySQL
+
+- name: MySQL | restart mysql
+  service:
+    name: mysql
+    state: restarted
+  become: yes
+
+
